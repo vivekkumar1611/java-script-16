@@ -280,136 +280,226 @@
 
 // 14/08/2025
 
-let arr1 = ['a', 'b'];
-let arr2 = ['c', 'd'];
+// let arr1 = ['a', 'b'];
+// let arr2 = ['c', 'd'];
 
-// let merged = [...arr1, ...arr2];
+// // let merged = [...arr1, ...arr2];
+
+// // console.log(merged);
+
+// let student = { name: "John", age: 25 };
+
+// let clone = { ...student };
+
+// console.log(clone);
+
+// let obj1 = { x: 1, y: 2 };
+// let obj2 = { y: 3, z: 4 };
+
+// //  let merged = { ...obj1, ...obj2 };
+
+// //  console.log(merged);
+
+// function sumAll(...numbers) {
+//   return numbers.reduce((total, num) => total + num, 0);
+// }
+
+
+// console.log(sumAll(1, 2, 3));        
+// console.log(sumAll(5, 10, 15, 20));  
+// console.log(sumAll());               
+
+// function logArgs(first, second, ...rest) {
+//   console.log("First:", first);
+//   console.log("Second:", second);
+//   console.log("Remaining:", rest);
+// }
+
+
+// logArgs(10, 20, 30, 40, 50);
+
+// let colors = ['red', 'green', 'blue'];
+
+// let [c1, c2] = colors;
+
+// console.log("c1:", c1); 
+// console.log("c2:", c2); 
+
+// let items = ['pen', 'pencil', 'eraser', 'sharpener'];
+
+// let [first, , , last] = items;
+
+// console.log("First:", first); 
+// console.log("Last:", last);   
+
+// let nums = [10, 20, 30, 40, 50];
+
+// let [n1, n2, ...rest] = nums;
+
+// console.log("First:", n1);    
+// console.log("Second:", n2);   
+// console.log("Remaining:", rest); 
+
+// let vehicles = ['car', ['bike', ['bus', 'train']]];
+
+// let [ , [ , [bus]]] = vehicles;
+
+// console.log(bus); 
+
+// let a = 1;
+// let b = 2;
+
+// [a, b] = [b, a];  
+
+// console.log("a:", a); 
+// console.log("b:", b); 
+
+// let x = [1, 2, 3];
+
+// x.push(4, 5);
+
+// console.log(x);
+
+// let y = [1, 2, 3];
+
+// y.pop(); 
+// y.pop(); 
+
+// console.log(y);
+
+// let z = [3, 4, 5];
+
+// z.unshift(1, 2);
+
+// console.log(z);
+
+// let s = [1, 2, 3, 4];
+
+// s.shift(); 
+
+// console.log(s);
+
+// let sp = [10, 20, 30, 40, 50];
+
+// sp.splice(1, 2, 99, 100);
+
+// console.log(sp);
+
+// let c = [1, 2];
+// let d = [3, 4];
+
+// let merged = c.concat(d);
 
 // console.log(merged);
 
-let student = { name: "John", age: 25 };
+// let I = [5, 6, 7, 8, 9];
 
-let clone = { ...student };
+// let sliced = I.slice(1, 3);
 
-console.log(clone);
+// console.log(sliced);
 
-let obj1 = { x: 1, y: 2 };
-let obj2 = { y: 3, z: 4 };
+// let j = [1, [2, [3, [4]]]];
 
-//  let merged = { ...obj1, ...obj2 };
+// let flatArr1 = j.flat(Infinity);
 
-//  console.log(merged);
+// console.log(flatArr1);
 
-function sumAll(...numbers) {
-  return numbers.reduce((total, num) => total + num, 0);
-}
+// let k = new Array(5).fill("Hello");
+
+// console.log(k);
+
+// let m = [1, 2, 3, [4, [5, 6]]];
+
+// let flatArr2 = m.flat(Infinity);
+
+// console.log(flatArr2);
+
+// 19/08/2025
+
+let nums=[45,12,3,99,23,8]
+var new1 = nums.sort((a,b)=>{
+      return a-b
+})
+console.log(new1)
+var new2 = nums.sort((a,b)=>{
+    return b-a
+})
+console.log(new2);
+
+var colors = ["red","blue","green","yellow"]
+colors.push("pink");
+var val = colors.includes("pink");
+console.log(val);
+console.log(colors);
+
+let arr =["HTML","CSS","JS"]
+let jo = arr.join()
+console.log("join:",jo);
+let tos  = arr.toString()
+console.log("tostring:",tos);
+
+let items =["pen","book","pen","pencil","pen"]
+let ind = items.indexOf("pen",1)
+console.log("indexof:",ind);
+let last = items.lastIndexOf("pen",1)
+console.log("lastindexof:",last);
+
+let students=["kamal","Sita","Ravi"]
+let stu = students.forEach((cEle,index,tA)=>{
+console.log("Foreach:",cEle);
+})
+let Student=students.map((cEle,ind,tA)=>{
+  return tA
+})
+console.log("Map:",Student);
+
+let products = [ {name: "Laptop", price: 45000},
+                   {name: "Phone", price:20000},
+                 {name: "Tablet", price: 20000},
+                 {name: "Monitor", price: 12000} ];
+let prod = products.filter((CE)=>CE.price==20000)                 
+console.log("filter:",prod);
+let prodfind= products.find((CE)=>CE.price==20000)
+console.log(prodfind);
+
+let numbers = [5, 10, 15, 20, 25];
+let sum = numbers.reduce((acc,ce,ind,ta)=>{
+    return acc+ce
+},0)
+console.log(sum);
+
+let ages = [22, 18, 25, 30, 16,];
+let some=ages.some((ce)=>{
+     return ce<18
+})
+console.log("under18:",some);
+let every=ages.every((ce)=>{
+    return ce>15
+})
+console.log("above15:",every);
+
+let str = "Hello World";
+console.log("Replace:",str.replace("World","Javascript"));
+console.log("slice:",str.slice(0,6));
+
+let sentence = "I love coding";
+console.log("split:",sentence.split(" "));
+console.log("Repeat:",sentence.repeat(3));
 
 
-console.log(sumAll(1, 2, 3));        
-console.log(sumAll(5, 10, 15, 20));  
-console.log(sumAll());               
-
-function logArgs(first, second, ...rest) {
-  console.log("First:", first);
-  console.log("Second:", second);
-  console.log("Remaining:", rest);
-}
 
 
-logArgs(10, 20, 30, 40, 50);
 
-let colors = ['red', 'green', 'blue'];
 
-let [c1, c2] = colors;
 
-console.log("c1:", c1); 
-console.log("c2:", c2); 
 
-let items = ['pen', 'pencil', 'eraser', 'sharpener'];
 
-let [first, , , last] = items;
 
-console.log("First:", first); 
-console.log("Last:", last);   
 
-let nums = [10, 20, 30, 40, 50];
 
-let [n1, n2, ...rest] = nums;
 
-console.log("First:", n1);    
-console.log("Second:", n2);   
-console.log("Remaining:", rest); 
 
-let vehicles = ['car', ['bike', ['bus', 'train']]];
 
-let [ , [ , [bus]]] = vehicles;
 
-console.log(bus); 
 
-let a = 1;
-let b = 2;
 
-[a, b] = [b, a];  
-
-console.log("a:", a); 
-console.log("b:", b); 
-
-let x = [1, 2, 3];
-
-x.push(4, 5);
-
-console.log(x);
-
-let y = [1, 2, 3];
-
-y.pop(); 
-y.pop(); 
-
-console.log(y);
-
-let z = [3, 4, 5];
-
-z.unshift(1, 2);
-
-console.log(z);
-
-let s = [1, 2, 3, 4];
-
-s.shift(); 
-
-console.log(s);
-
-let sp = [10, 20, 30, 40, 50];
-
-sp.splice(1, 2, 99, 100);
-
-console.log(sp);
-
-let c = [1, 2];
-let d = [3, 4];
-
-let merged = c.concat(d);
-
-console.log(merged);
-
-let I = [5, 6, 7, 8, 9];
-
-let sliced = I.slice(1, 3);
-
-console.log(sliced);
-
-let j = [1, [2, [3, [4]]]];
-
-let flatArr1 = j.flat(Infinity);
-
-console.log(flatArr1);
-
-let k = new Array(5).fill("Hello");
-
-console.log(k);
-
-let m = [1, 2, 3, [4, [5, 6]]];
-
-let flatArr2 = m.flat(Infinity);
-
-console.log(flatArr2);
