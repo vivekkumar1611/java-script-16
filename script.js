@@ -416,78 +416,118 @@
 
 // 19/08/2025
 
-let nums=[45,12,3,99,23,8]
-var new1 = nums.sort((a,b)=>{
-      return a-b
-})
-console.log(new1)
-var new2 = nums.sort((a,b)=>{
-    return b-a
-})
-console.log(new2);
+// let nums=[45,12,3,99,23,8]
+// var new1 = nums.sort((a,b)=>{
+//       return a-b
+// })
+// console.log(new1)
+// var new2 = nums.sort((a,b)=>{
+//     return b-a
+// })
+// console.log(new2);
 
-var colors = ["red","blue","green","yellow"]
-colors.push("pink");
-var val = colors.includes("pink");
-console.log(val);
-console.log(colors);
+// var colors = ["red","blue","green","yellow"]
+// colors.push("pink");
+// var val = colors.includes("pink");
+// console.log(val);
+// console.log(colors);
 
-let arr =["HTML","CSS","JS"]
-let jo = arr.join()
-console.log("join:",jo);
-let tos  = arr.toString()
-console.log("tostring:",tos);
+// let arr =["HTML","CSS","JS"]
+// let jo = arr.join()
+// console.log("join:",jo);
+// let tos  = arr.toString()
+// console.log("tostring:",tos);
 
-let items =["pen","book","pen","pencil","pen"]
-let ind = items.indexOf("pen",1)
-console.log("indexof:",ind);
-let last = items.lastIndexOf("pen",1)
-console.log("lastindexof:",last);
+// let items =["pen","book","pen","pencil","pen"]
+// let ind = items.indexOf("pen",1)
+// console.log("indexof:",ind);
+// let last = items.lastIndexOf("pen",1)
+// console.log("lastindexof:",last);
 
-let students=["kamal","Sita","Ravi"]
-let stu = students.forEach((cEle,index,tA)=>{
-console.log("Foreach:",cEle);
-})
-let Student=students.map((cEle,ind,tA)=>{
-  return tA
-})
-console.log("Map:",Student);
+// let students=["kamal","Sita","Ravi"]
+// let stu = students.forEach((cEle,index,tA)=>{
+// console.log("Foreach:",cEle);
+// })
+// let Student=students.map((cEle,ind,tA)=>{
+//   return tA
+// })
+// console.log("Map:",Student);
 
-let products = [ {name: "Laptop", price: 45000},
-                   {name: "Phone", price:20000},
-                 {name: "Tablet", price: 20000},
-                 {name: "Monitor", price: 12000} ];
-let prod = products.filter((CE)=>CE.price==20000)                 
-console.log("filter:",prod);
-let prodfind= products.find((CE)=>CE.price==20000)
-console.log(prodfind);
+// let products = [ {name: "Laptop", price: 45000},
+//                    {name: "Phone", price:20000},
+//                  {name: "Tablet", price: 20000},
+//                  {name: "Monitor", price: 12000} ];
+// let prod = products.filter((CE)=>CE.price==20000)                 
+// console.log("filter:",prod);
+// let prodfind= products.find((CE)=>CE.price==20000)
+// console.log(prodfind);
 
-let numbers = [5, 10, 15, 20, 25];
-let sum = numbers.reduce((acc,ce,ind,ta)=>{
-    return acc+ce
-},0)
-console.log(sum);
+// let numbers = [5, 10, 15, 20, 25];
+// let sum = numbers.reduce((acc,ce,ind,ta)=>{
+//     return acc+ce
+// },0)
+// console.log(sum);
 
-let ages = [22, 18, 25, 30, 16,];
-let some=ages.some((ce)=>{
-     return ce<18
-})
-console.log("under18:",some);
-let every=ages.every((ce)=>{
-    return ce>15
-})
-console.log("above15:",every);
+// let ages = [22, 18, 25, 30, 16,];
+// let some=ages.some((ce)=>{
+//      return ce<18
+// })
+// console.log("under18:",some);
+// let every=ages.every((ce)=>{
+//     return ce>15
+// })
+// console.log("above15:",every);
 
-let str = "Hello World";
-console.log("Replace:",str.replace("World","Javascript"));
-console.log("slice:",str.slice(0,6));
+// let str = "Hello World";
+// console.log("Replace:",str.replace("World","Javascript"));
+// console.log("slice:",str.slice(0,6));
 
-let sentence = "I love coding";
-console.log("split:",sentence.split(" "));
-console.log("Repeat:",sentence.repeat(3));
+// let sentence = "I love coding";
+// console.log("split:",sentence.split(" "));
+// console.log("Repeat:",sentence.repeat(3));
+
+// 21/08/2025 Project
 
 
+let score = 0;
 
+let quiz = [
+  {
+    question: "Q1: What is the capital of India?\nA) Delhi\nB) Mumbai\nC) Kolkata",
+    answer: ["a", "delhi"]
+  },
+  {
+    question: "Q2: Which is the largest planet in our solar system?\nA) Earth\nB) Jupiter\nC) Saturn",
+    answer: ["b", "jupiter"]
+  },
+  {
+    question: "Q3: Who is known as the Father of Computers?\nA) Charles Babbage\nB) Alan Turing\nC) Isaac Newton",
+    answer: ["a", "charles babbage"]
+  },
+  {
+    question: "Q4: What is the national animal of India?\nA) Tiger\nB) Lion\nC) Elephant",
+    answer: ["a", "tiger"]
+  },
+  {
+    question: "Q5: Which gas do humans need to survive?\nA) Carbon Dioxide\nB) Oxygen\nC) Nitrogen",
+    answer: ["b", "oxygen"]
+  }
+];
+
+
+for (let q of quiz) {
+  let userAnswer = prompt(q.question);
+
+  if (userAnswer && q.answer.includes(userAnswer.toLowerCase())) {
+    alert("Correct!");
+    score++;
+  } else {
+    alert("Wrong! Correct answer is: " + q.answer[1][0].toUpperCase() + q.answer[1].slice(1));
+  }
+}
+
+
+alert("Final score is: " + score + "/" + quiz.length);
 
 
 
